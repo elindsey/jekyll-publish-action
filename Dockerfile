@@ -4,7 +4,7 @@ LABEL repository="https://github.com/elindsey/jekyll-action"
 
 #ENV BUNDLER_VERSION 1.17.3
 RUN apt-get update && \
-    apt-get install -y \
+    apt-get install -yq \
         build-essential \
         git
 
