@@ -1,6 +1,6 @@
 FROM ruby:2-slim
 
-LABEL repository="https://github.com/elindsey/jekyll-action"
+LABEL repository="https://github.com/elindsey/jekyll-publish-action"
 
 RUN gem install bundler && \
     apt-get update && \
