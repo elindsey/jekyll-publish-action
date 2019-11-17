@@ -2,9 +2,9 @@ FROM ruby:2-slim
 
 LABEL repository="https://github.com/elindsey/jekyll-action"
 
-ENV BUNDLER_VERSION 1.17.3
-RUN apt-get update && \
-    apt-get install -yq \
+RUN gem install bundler && \
+    apt-get update && \
+    apt-get install -y \
         build-essential \
         git
 
