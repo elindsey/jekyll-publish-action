@@ -9,10 +9,9 @@ cd build
 # tell GH not to run jekyll
 touch .nojekyll
 
+git init
 git config user.name "${GITHUB_ACTOR}"
 git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
-
-git init
 git add .
 git commit -m "automatic build from Github Action ${GITHUB_ACTION}"
 
