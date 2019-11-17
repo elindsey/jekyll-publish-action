@@ -2,10 +2,7 @@
 set -ex
 
 bundle install
-
-SRC=$(find . -name _config.yml -exec dirname {} \;)
-bundle exec jekyll build -s ${SRC} -d build
-
+bundle exec jekyll build -d build
 cd build
 
 # tell GH not to run jekyll
