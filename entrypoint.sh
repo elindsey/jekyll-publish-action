@@ -1,7 +1,9 @@
 #!/bin/sh
 set -ex
 
-cd "${GITHUB_WORKSPACE}/${GITHUB_REPOSITORY}"
+# GITHUB_REPOSITORY is of the form user/repo-name
+REPO=$(echo ${GITHUB_REPOSITORY} | cut -f2 -d'/')
+cd "${GITHUB_WORKSPACE}/${REPO}"
 bundle install
 bundle exec jekyll build -d build
 cd build
