@@ -1,6 +1,7 @@
 #!/bin/sh
 set -ex
 
+cd "${GITHUB_WORKSPACE}/${GITHUB_REPOSITORY}"
 bundle install
 bundle exec jekyll build -d build
 cd build
@@ -18,5 +19,3 @@ git commit -m "automatic build from Github Action ${GITHUB_ACTION}"
 set +x # don't print token
 git push --force "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" master:gh-pages
 set -x
-
-cd ..
