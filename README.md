@@ -16,5 +16,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         uses: elindsey/jekyll-publish-action@master
         # alternately, to use a cached docker image
-        #uses: docker://elindsey/jekyll-publish-action/jekyll-4:latest
+        #uses: docker://elindsey/jekyll-publish-action:latest
 ```
