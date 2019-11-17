@@ -1,7 +1,6 @@
 #!/bin/sh
 set -ex
 
-echo $PWD
 bundle install
 bundle exec jekyll build -d build
 cd build
